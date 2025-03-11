@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MY Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/e657d00cf5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+<div id="header">   
+    <div class="container">
+        <nav>
+            <img src="bg3.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="seemore.html">My Projects</a></li> 
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p></p>
+            <h1>Hi, I'm <span>Gouthamraj R</span><br> From Coimbatore</h1>
+        </div>
+
+        
+    </div>
+</div>
+
+<!----------about--------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="bg4.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a 3D Artist, I started from Unity,  
+                    I have designed my own 2D and 3D games using Unity and also build 3D models in Blender.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>3D Artist</span><br>Unity and Blender</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020</span><br>SSLC from Vailankanni Public School (CBSE)</li>
+                        <li><span>2022</span><br>HSC from Bharat International Senior Secondary School (CBSE)</li>
+                        <li><span>2022 - Current</span><br>CSE from KPR Institute of Engineering and Technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------services-------------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="services-list">
+            <div>
+                <img src="L:\myportfolio-main\unity_white.png" 
+                     alt="Unity Logo" 
+                     style="width: 80px; height: 80px;">
+                <h2>Game Designing</h2>
+                <p>I use Unity and C# to develop 2D or 3D games.</p>
+                <a href="https://unity.com/">Learn more</a>
+            </div>                                            
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" 
+                     alt="Blender Logo" 
+                     style="width: 80px; height: 80px;">
+                <h2>Blender 3D</h2>
+                <p>I use Blender for designing 3D models and Animations.</p>
+                <a href="https://www.blender.org/">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------contact----------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>gouthamraj318@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/gouthamraj-r-561744257/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/its_gouthamraj/?__pwa=1#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Gouthamraj2004"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="GouthamRaj_Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function opentab(tabname) {
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+    
+        for (var i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].classList.remove("active-link");
+        }
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active-tab");
+        }
+    
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>    
+
+</body>
+</html>
